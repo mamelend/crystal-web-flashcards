@@ -8,7 +8,7 @@ body {
 }
 
 .main_page_nav {
-  
+
 }
 
 a {
@@ -19,4 +19,12 @@ a {
 a:hover {
   color: #006fc2;
   text-decoration: underline;
+}
+
+.index_header {
+  float: left;
+}
+
+.index_deck {
+  padding:1em 3em;
 }

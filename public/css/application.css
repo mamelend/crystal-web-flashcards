@@ -1,0 +1,22 @@
+body {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.main_page_header {
+
+}
+
+.main_page_nav {
+  
+}
+
+a {
+  color: #27AAE1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #006fc2;
+  text-decoration: underline;
+}

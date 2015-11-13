@@ -1,6 +1,6 @@
-# User.create([{username:'joe', email: 'joe@joe.com', password: 'joe'},
-#              {username:'arc', email: 'arc@arc.com', password: 'arc'},
-#              {username:'bob', email: 'bob@bob.com', password: 'bob'}])
+User.create([{username:'joe', email: 'joe@joe.com', password: 'joe'},
+             {username:'arc', email: 'arc@arc.com', password: 'arc'},
+             {username:'bob', email: 'bob@bob.com', password: 'bob'}])
 
 Deck.create([{category: 'Video Games', name: 'Retro Game Trivia'},
              {category: 'Comics' , name: 'Marvel Trivia' },

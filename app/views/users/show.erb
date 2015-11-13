@@ -1,2 +1,14 @@
-<h1>Let's look at your stats...</h1>
+<h1 class="bold centered">YOUR STATS</h1>
 
+<div>
+  <ol>
+    <li class="bold bigger_text">
+      <%=@user.username%>
+    </li>
+    <% @user.rounds.each do |round| %>
+      <li>
+        On <%= round.points %> you scored <%= round.points %> points!
+      </li>
+    <% end %>
+  </ol>
+</div>

@@ -32,8 +32,7 @@ get '/users/logout' do
   redirect("/")
 end
 
-get '/users/:id/entries' do
+get '/users/:id' do
   @user = User.find(params[:id])
-  @entries = @user.entries
-  erb :'/index_by_user'
+  erb :'/users/show'
 end

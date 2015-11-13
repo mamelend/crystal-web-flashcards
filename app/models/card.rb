@@ -1,3 +1,3 @@
 class Card < ActiveRecord::Base
-  has_one :deck
+  belongs_to :deck
 end

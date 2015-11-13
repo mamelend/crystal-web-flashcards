@@ -35,5 +35,5 @@ end
 get '/users/:id/entries' do
   @user = User.find(params[:id])
   @entries = @user.entries
-  erb :'entries/index_by_user'
+  erb :'/index_by_user'
 end

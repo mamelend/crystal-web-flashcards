@@ -3,22 +3,26 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.main_page_header {
-
+div{
+  display: block;
+  position: relative;
 }
 
-.main_page_nav {
-
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
 a {
-  color: #27AAE1;
+  color: white;
   text-decoration: none;
 }
 
 a:hover {
   color: #006fc2;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .index_header {
@@ -27,4 +31,65 @@ a:hover {
 
 .index_deck {
   padding:1em 3em;
+}
+
+.inline {
+  display: inline;
+  color: white;
+}
+
+.no_bullets {
+  list-style-type: none;
+}
+
+.right {
+  vertical-align: right;
+  text-align: right;
+}
+
+.centered {
+  vertical-align: center;
+  text-align: center;
+}
+
+.small_list_buffer {
+  margin-left: 4px;
+  margin-right: 4px; 
+
+}
+
+.header_back {
+  background-color: #909AFF;
+}
+
+.footer_back {
+  background-color: #FFD744;
+}
+
+.enlarge {
+  padding: 2em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bigger_text {
+  font-size: 1.5em;
+}
+
+.smaller_text {
+  font-size: .75em;
+}
+
+.clear {
+  clear: left;
+}
+
+footer p {
+  bottom: 2px;
+}
+
+li {
+  list-style-type: none;
 }

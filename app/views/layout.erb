@@ -16,9 +16,35 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Crystal Cards</title>
 </head>
 <body>
+  <header class="header_back enlarge">
+      <div class=""> flashcards
+        <nav class="right">
+          <ul class="">
+          <% if logged_in? && current_user %>
+            <li class="inline no_bullets small_list_buffer"><a href="/users/<%=current_user.id%>"><%=current_user.username.downcase%></a></li>
+            <li class="inline no_bullets small_list_buffer"><a href="/users/logout">logout</a></li>
+          <% else %>
+            <li class="inline no_bullets small_list_buffer"><a href="/users/new">register</a></li>
+            <li class="inline no_bullets small_list_buffer"><a href="/users/login">login</a></li>
+          <% end %>  
+            <li class="inline no_bullets small_list_buffer"><a href="/">home</a></li>
+          </ul>
+        </nav>
+
+        <img src="" class="">
+      </div>
+    </header>
+
   <%= yield %>
+
+  <footer class="clear footer_back enlarge">
+    <div class ="smaller_text">
+      <p>Created by Arcangelo, Miguel, and Salim.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+<h1>Okay, what's your info again?</h1>
+
+<% if @errors %>
+  <span>Something went wrong:</span>
+  <ul class="">
+    <% @errors.each do |error| %>
+      <li class=""><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form method="post" action="/users/login">
+  <label for="email-input" class="">Email:</label>
+  <input id="email-input" name="user[email]" type="email" tabindex="1" class=""/>
+
+  <label for="password-input" class="">Password:</label>
+  <input id="password-input" name="user[password]" type="password" tabindex="2" class=""/>
+
+  <input type="submit" value="Sign In" tabindex="3" class="">
+</form>

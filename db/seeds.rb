@@ -61,4 +61,4 @@ Card.create([{deck_id: 1, question:'What highly addictive puzzle game designed b
              {deck_id: 4, question:'Who was the 2015 Finals MVP?', answer:'Andre Iguodala',difficulty: 1},
              {deck_id: 4, question:'Which player was well known for his underhand free throw form?', answer:'Rick Barry',difficulty: 1},
              {deck_id: 4, question:'Which player is on the NBA logo?', answer:'Jerry West',difficulty: 1}])
-            # {deck_id: 4, question:'On Dec. 9, 2004 what NBA player scored 13 points in 33 seconds to seal a win against the San Antonio Spurs', answer:'Tracy McGrady',difficulty: 1}])
+             {deck_id: 4, question:'On Dec. 9, 2004 what NBA player scored 13 points in 33 seconds to seal a win against the San Antonio Spurs', answer:'Tracy McGrady',difficulty: 1}])

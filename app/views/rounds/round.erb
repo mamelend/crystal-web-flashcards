@@ -1,7 +1,7 @@
-<p><% @deck.name %> Trivia</p>
-<p class="round_question"><% @card.question %></p>
+<p><%= @deck.name %> Trivia</p>
+<p class="round_question"><%= Round.card.question %></p>
 <p>Enter your guess:</p>
-<form method="post" action="/rounds/<% @deck.id %>">
+<form method="post" action="/rounds/<%= @round.id %>">
   <input type="hidden" name="_method" value="put">
   <input type="text" name="guess">
   <input type="submit" value="submit your guess">

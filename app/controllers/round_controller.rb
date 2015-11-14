@@ -3,20 +3,20 @@ get '/rounds/:id' do
     @round = Round.new(deck_id: params[:id], user_id: session[:user_id])
     if @round.save
       @deck = Deck.find(params[:id])
-      @points_for_card = {}
-      @cards = @deck.cards.all.shuffle!
-      @cards.each { |card| @points_for_card[card.id] = 2 }
-      @card = @cards.pop
+      Round.cards = @deck.cards.shuffle
+      Round.cards.each { |card| Round.points_for_card[card.id] = 2 }
+      Round.card = Round.cards.pop
     else
       "Game not started"
     end
   else
-    @card = @cards.shuffle!.pop
+    Round.card = Round.cards.shuffle.pop
   end
   erb :'/rounds/round'
 end
 
-put '/rounds' do
+put '/rounds/:id' do
+  @round = Round.find(params[:id])
   @round.total_guesses += 1
   if params[:guess] == @card.answer
     @round.points += @points_for_card[:@card.id] * @card.difficulty

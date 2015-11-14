@@ -19,14 +19,15 @@ put '/rounds/:id' do
   @round = Round.find(params[:id])
   @round.total_guesses += 1
   if params[:guess] == @card.answer
-    @round.points += @points_for_card[:@card.id] * @card.difficulty
-    @points_for_card[:@card.id] == 2 ? @round.correct += 1 : nil
+    @round.points += Round.points_for_card[:Round.card.id] * Round.card.difficulty
+    Round.points_for_card[:Round.card.id] == 2 ? @round.correct += 1 : nil
   else
-    @points_for_card[@card.id] > 0 ? @points_for_card[@card.id] += -1 : nil
-    @cards << @card
+    Round.points_for_card[Round.card.id] > 0 ? Round.points_for_card[Round.card.id] += -1 : nil
+    Round.cards << Round.card
   end
 
-  if @cards.length > 0
+  if Round.cards.length > 0
+    @round.save
     redirect "/rounds/#{ @deck.id }"
   else
     @round.save

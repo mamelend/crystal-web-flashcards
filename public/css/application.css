@@ -3,9 +3,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-div{
+div {
   display: block;
   position: relative;
+  font-family: 'Quicksand', sans-serif;
 }
 
 footer {
@@ -14,15 +15,41 @@ footer {
   width: 100%;
 }
 
-a {
+nav a {
   color: white;
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   color: #006fc2;
   text-decoration: none;
   font-weight: bold;
+}
+
+div a {
+  color: black;
+  text-decoration: none;
+}
+
+div a:hover {
+  color: #872378;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header nav{
+  position: relative;
 }
 
 .index_header {
@@ -79,6 +106,10 @@ a:hover {
   font-weight: bold;
 }
 
+.bolder {
+  font-variant: bolder;
+}
+
 .bigger_text {
   font-size: 1.5em;
 }
@@ -91,11 +122,24 @@ a:hover {
   clear: left;
 }
 
-.bottom {
-  position: absolute;
+.clear_right {
+  clear:  right;
+}
+
+.top {
   top: 2px;
 }
 
-li {
-  list-style-type: none;
+.bottom {
+  position: absolute;
+  bottom: 2px;
+}
+
+.float {
+  position: fixed;
+  float:left;
+}
+
+.fixed {
+  position: fixed;
 }

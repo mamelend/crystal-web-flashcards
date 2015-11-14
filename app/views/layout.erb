@@ -20,11 +20,12 @@
 </head>
 <body>
   <header class="header_back enlarge">
-      <div class=""> flashcards
+      <div class="">
+        <img class="clear_right float top" src="" alt="crystal"`>
         <nav class="right">
           <ul class="">
           <% if logged_in? && current_user %>
-            <li class="inline no_bullets small_list_buffer"><a href="/users/<%=current_user.id%>"><%=current_user.username.downcase%></a></li>
+            <li class="inline no_bullets small_list_buffer"><a class="bold "href="/users/<%=current_user.id%>"><%=current_user.username.downcase%></a></li>
             <li class="inline no_bullets small_list_buffer"><a href="/users/logout">logout</a></li>
           <% else %>
             <li class="inline no_bullets small_list_buffer"><a href="/users/new">register</a></li>
@@ -42,7 +43,7 @@
 
   <footer class="clear footer_back enlarge">
     <div class ="smaller_text">
-      <p class="bottom left">Created by Arcangelo, Miguel, and Salim.</p>
+      <p class="fixed bottom">Created by Arcangelo, Miguel, and Salim Nov. 2015</p>
     </div>
   </footer>
 

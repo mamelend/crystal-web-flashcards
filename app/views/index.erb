@@ -1,5 +1,16 @@
-<h2 class="index_header">Flashcard Decks</h2>
+<div class="clear">
+  <h2 class="centered">Choose A Deck</h2>
+</div>
 
-  <% @decks.each do |deck| %>
-    <span class=""><a href="/rounds/<%= deck.id  %>">"hi"<%= deck.name %></a></span>
-  <% end %>
+<div class="clear">
+  <table>
+    <% @decks.each do |deck| %>
+      <tr>
+      <td>  
+        <img class="centered" src="" alt="deck pic" height="40" width="40"/>
+        <span class="clear centered"><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a></span>
+      </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

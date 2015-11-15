@@ -26,8 +26,12 @@ put '/rounds/:id' do
     @round.points += @points[@card.id - @index_separator].to_i * @card.difficulty
     @points[@card.id - @index_separator].to_i  == 2 ? @round.correct += 1 : nil
     @points[@card.id - @index_separator] = "3"
+    @is_correct = 1
+    erb :'/rounds/result'
   else
     @points[@card.id - @index_separator].to_i > 0 ? @points[@card.id - @index_separator] = (@points[@card.id - @index_separator].to_i - 1).to_s : nil
+    @is_correct = 0
+    erb :'/rounds/result'
   end
 
   @round.save

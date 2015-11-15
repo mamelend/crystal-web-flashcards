@@ -1,0 +1,19 @@
+<p class="clear_right centered bigger_text bolder"><%= @deck.name %></p>
+
+<div class=" clear card transition">
+  <h2 class="transition">Question <%= @card.id %> </h2>
+  <p class="centered"><%= @card.question %></p>
+  <div class="cta-container transition">
+
+    <p class="round_question"></p>
+    <p></p>
+    <form method="post" action="/rounds/<%= @round.id %>">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="card_id" value="<%= @card.id %>">
+      <input type="hidden" name="points" value="<%= @points %>">
+      <input type="submit" value="Next qeustion">
+    </form>
+
+  </div>
+  <div class="card_circle transition"></div>
+</div>

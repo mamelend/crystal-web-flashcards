@@ -152,3 +152,7 @@ li {
 .bottom_buffer {
   margin-bottom: 100px;
 }
+
+.pad_left {
+  margin-left: 10px;
+}

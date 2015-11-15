@@ -5,10 +5,10 @@
 <div class="clear">
   <table class = "bottom_buffer">
     <% @decks.each do |deck| %>
-      <tr>
+      <tr class="pad_left">
       <td>
         <span class="clear centered buffer"><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a></span>
-        <img class="buffer" src="images/checkmark.gif" alt="deck pic" height="150" width="300" align="left"/>
+        <img class="buffer" src=<%= deck.image_url %> alt="deck pic" height="169" width="300" align="left"/>
       </td>
       </tr>
     <% end %>

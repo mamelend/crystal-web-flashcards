@@ -37,7 +37,6 @@
 .card:hover h2 small { color: #fff }
 .card:hover p { margin-top: 300px }
 .card_circle {
-    background-image: url("../images/marvel_back.jpg");
     background-color: #3487f7;
     background-size: cover;
     border-radius: 50%;

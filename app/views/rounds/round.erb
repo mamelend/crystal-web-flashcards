@@ -1,11 +1,6 @@
 <p class="clear_right centered bigger_text bolder"><%= @deck.name %></p>
 
-<% if @is_correct == 1 %>
-  <%  %>
-<% elsif %>
-  <% if @is_correct == 2 %>
-<% else %>
-<% end %>
+
 
 <div class=" clear card transition">
   <h2 class="transition">Question <%= @card.id %> </h2>
@@ -23,5 +18,5 @@
     </form>
 
   </div>
-  <div class="card_circle transition"></div>
+  <div class="card_circle transition" style="background-color: purple; background-image: url(<%= @card.image_url %>);"></div>
 </div>

@@ -12,6 +12,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/card.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -19,19 +20,19 @@
   <title>Crystal Cards</title>
 </head>
 <body>
-  <header class="header_back enlarge">
-      <div class="">
-        <img class="clear_right float top" src="" alt="crystal"`>
-        <nav class="right">
-          <ul class="">
+  <header class="header_back bottom_border">
+      <div>
+        <p class="white header_text">flashcards</p>
+        <nav class="inline right">
+          <ul>
           <% if logged_in? && current_user %>
             <li class="inline no_bullets small_list_buffer"><a class="bold "href="/users/<%=current_user.id%>"><%=current_user.username.downcase%></a></li>
-            <li class="inline no_bullets small_list_buffer"><a href="/users/logout">logout</a></li>
+            <li class="white inline no_bullets small_list_buffer"><a href="/users/logout">logout</a></li>
           <% else %>
-            <li class="inline no_bullets small_list_buffer"><a href="/users/new">register</a></li>
-            <li class="inline no_bullets small_list_buffer"><a href="/users/login">login</a></li>
+            <li class="white inline no_bullets small_list_buffer"><a href="/users/new">register</a></li>
+            <li class="white inline no_bullets small_list_buffer"><a href="/users/login">login</a></li>
           <% end %>
-            <li class="inline no_bullets small_list_buffer"><a href="/">home</a></li>
+            <li class="white inline no_bullets small_list_buffer"><a href="/">home</a></li>
           </ul>
         </nav>
 
@@ -43,7 +44,7 @@
 
   <footer class="clear footer_back enlarge">
     <div class ="smaller_text">
-      <p class="fixed bottom">Created by Arcangelo, Miguel, and Salim Nov. 2015</p>
+      <p class="fixed bottom right">Created by Arcangelo, Miguel, and Salim Nov. 2015</p>
     </div>
   </footer>
 

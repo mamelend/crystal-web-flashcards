@@ -3,12 +3,12 @@
 </div>
 
 <div class="clear">
-  <table>
+  <table class = "bottom_buffer">
     <% @decks.each do |deck| %>
       <tr>
-      <td>  
-        <img class="centered" src="" alt="deck pic" height="40" width="40"/>
-        <span class="clear centered"><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a></span>
+      <td>
+        <span class="clear centered buffer"><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a></span>
+        <img class="buffer" src="images/retrogame_back.jpg" alt="deck pic" height="150" width="300" align="left"/>
       </td>
       </tr>
     <% end %>

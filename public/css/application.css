@@ -27,7 +27,6 @@ nav a:hover {
 }
 
 div a {
-  color: black;
   text-decoration: none;
 }
 
@@ -42,22 +41,20 @@ li {
 }
 
 .header img {
-  float: left;
   width: 100px;
   height: 100px;
-  background: #555;
 }
 
 .header nav{
   position: relative;
 }
 
-.index_header {
-  float: left;
-}
-
-.index_deck {
-  padding:1em 3em;
+.header_text {
+  position: relative;
+  padding: 5px;
+  margin: 0px;
+  font-size: 40px;
+  width: 50%;
 }
 
 .inline {
@@ -91,7 +88,7 @@ li {
 }
 
 .header_back {
-  background-color: #909AFF;
+  background-color: #3487f7;
 }
 
 .footer_back {
@@ -123,7 +120,7 @@ li {
 }
 
 .clear_right {
-  clear:  right;
+  clear: right;
 }
 
 .top {
@@ -142,4 +139,16 @@ li {
 
 .fixed {
   position: fixed;
+}
+
+.bottom_border {
+  border-bottom: solid 1em #FFD744;
+}
+
+.buffer {
+  margin-bottom: 5px;
+}
+
+.bottom_buffer {
+  margin-bottom: 100px;
 }

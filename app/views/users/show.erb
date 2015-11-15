@@ -7,7 +7,7 @@
     </li>
     <% @user.rounds.each do |round| %>
       <li>
-        On <%= round.points %> you scored <%= round.points %> points!
+        On <%= round.created_at %> you scored <%= round.points %> points!
       </li>
     <% end %>
   </ol>

@@ -3,14 +3,13 @@ get '/rounds/:id' do
     @round = Round.new(deck_id: params[:id], user_id: session[:user_id])
     if @round.save
       @deck = Deck.find(params[:id])
-      Round.cards = @deck.cards.shuffle
-      Round.cards.each { |card| Round.points_for_card[card.id] = 2 }
-      Round.card = Round.cards.pop
+      @points = "P"
+      @cards = @deck.cards.shuffle
+      @cards.each { @points += "2" }
+      @card = @cards.pop
     else
       "Game not started"
     end
-  else
-    Round.card = Round.cards.shuffle.pop
   end
   erb :'/rounds/round'
 end
@@ -18,23 +17,34 @@ end
 put '/rounds/:id' do
   @round = Round.find(params[:id])
   @round.total_guesses += 1
+  @deck = Deck.find(@round.deck_id)
+  @cards = @deck.cards
+  @index_separator = @cards.first.id - 1
+  @card = Card.find(params[:card_id])
+  @points = params[:points]
   if params[:guess] == @card.answer
-    @round.points += Round.points_for_card[:Round.card.id] * Round.card.difficulty
-    Round.points_for_card[:Round.card.id] == 2 ? @round.correct += 1 : nil
+    @round.points += @points[@card.id - @index_separator].to_i * @card.difficulty
+    @points[@card.id - @index_separator].to_i  == 2 ? @round.correct += 1 : nil
+    @points[@card.id - @index_separator] = "3"
   else
-    Round.points_for_card[Round.card.id] > 0 ? Round.points_for_card[Round.card.id] += -1 : nil
-    Round.cards << Round.card
+    @points[@card.id - @index_separator].to_i > 0 ? @points[@card.id - @index_separator] = (@points[@card.id - @index_separator].to_i - 1).to_s : nil
   end
 
-  if Round.cards.length > 0
-    @round.save
-    redirect "/rounds/#{ @deck.id }"
+  @round.save
+
+  @cards = @deck.cards.reject { |card| @points[card.id - @index_separator] == "3" }
+
+  if @cards.count > 0
+    @cards = @cards.shuffle
+    @card = @cards.pop
+    erb :'rounds/round'
   else
-    @round.save
-    redirect "/rounds/over"
+    erb :'/rounds/over'
   end
 end
 
-get '/rounds/over/' do
-  erb :'/rounds/over'
+get '/rounds/:id/continue' do
+  erb :'rounds/round'
 end
+
+

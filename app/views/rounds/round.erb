@@ -1,5 +1,7 @@
 <p class="clear_right centered bigger_text bolder"><%= @deck.name %></p>
 
+
+
 <div class=" clear card transition">
   <h2 class="transition">Question <%= @card.id %> </h2>
   <p class="centered"><%= @card.question %></p>
@@ -16,5 +18,5 @@
     </form>
 
   </div>
-  <div class="card_circle transition"></div>
+  <div class="card_circle transition" style="background-color: purple; background-image: url(<%= @card.image_url %>);"></div>
 </div>

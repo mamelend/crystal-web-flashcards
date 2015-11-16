@@ -25,7 +25,7 @@ put '/rounds/:id' do
     @index_separator = @cards.first.id - 1
     @card = Card.find(params[:card_id])
     @points = params[:points]
-    if params[:guess] == @card.answer
+    if params[:guess].downcase == @card.answer.downcase
       @round.points += @points[@card.id - @index_separator].to_i * @card.difficulty
       @points[@card.id - @index_separator].to_i  == 2 ? @round.correct += 1 : nil
       @points[@card.id - @index_separator] = "3"

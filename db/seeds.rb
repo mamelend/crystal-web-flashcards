@@ -6,17 +6,17 @@ User.create([{username:'joe', email: 'joe@joe.com', password: 'joe'},
 
 Deck.create([{category: 'Video Games', name: 'Retro Game Trivia', image_url: "images/retrogame_back.jpg"},
              {category: 'Comics' , name: 'Marvel Trivia', image_url: "images/marvel_back.jpg"},
-             {category: 'Pop Culture' , name: 'Movie Trivia', image_url: "images/popculture_back.jpg"},
+             {category: 'Pop Culture' , name: 'Movie Trivia', image_url: "images/movies_back.jpg"},
              {category: 'Sports', name:'Basketball Trivia', image_url: "images/basketball_back.jpg"}])
 
 
 #Retro Game Trivia
 Card.create([{deck_id: 1, question:'What highly addictive puzzle game designed by a Russian programmer features Russian buildings, dancers and music?', answer:'Tetris',difficulty: 1, image_url: "../images/retrogame_back.jpg"},
              {deck_id: 1, question:'Before becoming a plumber in the 1983 game Mario Bros., Mario had a different profession. What was it? ', answer:'Pizza Maker',difficulty: 1, image_url: "../images/retrogame_back.jpg"},
-             {deck_id: 1, question:'Who is Bagman? ', answer:'Retired safe cracker',difficulty: 3},
+             {deck_id: 1, question:'Who is Bagman? ', answer:'Retired safe cracker',difficulty: 3, image_url: "../images/retrogame_back.jpg"},
              {deck_id: 1, question:'Who says "@!#?@!" every time he is hit by something? ', answer:'Donkey Kong',difficulty: 3, image_url: "../images/retrogame_back.jpg"},
-             {deck_id: 1, question:'What car do you drive in the original OutRun arcade game?', answer:'Ferarri Testarossa',difficulty: 2, image_url: "../images/retrogame_back.jpg"},
-             {deck_id: 1, question:'Name the first level in teh initial Sonic The Hedgehog game?', answer:'Green Hill Zone',difficulty: 3, image_url: "../images/retrogame_back.jpg"},
+             {deck_id: 1, question:'What car do you drive in the original OutRun arcade game?', answer:'Ferrari Testarossa',difficulty: 2, image_url: "../images/retrogame_back.jpg"},
+             {deck_id: 1, question:'Name the first level in the initial Sonic The Hedgehog game?', answer:'Green Hill Zone',difficulty: 3, image_url: "../images/retrogame_back.jpg"},
              {deck_id: 1, question:'Which bloody game franchise, born in 1992, courted controversy with its \'Fatalities\'?', answer:'Mortal Kombat',difficulty: 1, image_url: "../images/retrogame_back.jpg"},
              {deck_id: 1, question:'The first Metal Gear game was released on the MSX2 in what decade?', answer:'80\'s',difficulty: 2, image_url: "../images/retrogame_back.jpg"},
              {deck_id: 1, question:'What NFL Player in Tecmo Bowl is known for being unstoppable?', answer:'Bo Jackson',difficulty: 1, image_url: "../images/retrogame_back.jpg"},
@@ -38,17 +38,17 @@ Card.create([{deck_id: 1, question:'What highly addictive puzzle game designed b
              {deck_id: 2, question:'Which member of the Guardians of the Galaxy is related to Thanos?', answer:'Gamora',difficulty: 1, image_url: "../images/marvel_back.jpg"},
 
 #Movie Trivia Cards
-             {deck_id: 3, question:'Who created the musical score for "The Good, The Bad and The Ugly"', answer:'Ennio Morricone',difficulty: 3, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'What movie was the first the first color film? ', answer:'The Wizard of Oz',difficulty: 3, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'After Top Gun was shown in cinemas, recruitment into the Navy by young men went up by how many percent?', answer:'500',difficulty: 1, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'Who was the first character to fart in a Disney Movie', answer:'Pumbaa',difficulty: 2, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'Peter Ostrum, Charlie from Willy Wonka and the Chocolate Factory, never acted in another movie after that and is now working as a?...', answer:'Veterinarian',difficulty: 1, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'How fast did the bus in the movie Speed need to go in order not to blow up?', answer:'50mph',difficulty: 1, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'What was Adam Sandler\'s occupation in Big Daddy', answer:'A tollbooth worker',difficulty: 2, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'In the movie Next Friday what is the name of the vicious dog?', answer:'Chico',difficulty: 1, image_url: "../images/popculture_back.jpg"},
+             {deck_id: 3, question:'Who created the musical score for "The Good, The Bad and The Ugly"', answer:'Ennio Morricone',difficulty: 3, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'What movie was the first the first color film? ', answer:'The Wizard of Oz',difficulty: 3, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'After Top Gun was shown in cinemas, recruitment into the Navy by young men went up by how many percent?', answer:'500',difficulty: 1, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'Who was the first character to fart in a Disney Movie', answer:'Pumbaa',difficulty: 2, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'Peter Ostrum, Charlie from Willy Wonka and the Chocolate Factory, never acted in another movie after that and is now working as a?...', answer:'Veterinarian',difficulty: 1, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'How fast did the bus in the movie Speed need to go in order not to blow up?', answer:'50mph',difficulty: 1, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'What was Adam Sandler\'s occupation in Big Daddy', answer:'A tollbooth worker',difficulty: 2, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'In the movie Next Friday what is the name of the vicious dog?', answer:'Chico',difficulty: 1, image_url: "../images/movies_back.jpg"},
              {deck_id: 3, question:'Who was the sponsor for the tv show Wayne\'s World?', answer:'Noah\'s Arcade
-',difficulty: 1, image_url: "../images/popculture_back.jpg"},
-             {deck_id: 3, question:'Fill in the blank: \'Well, I could be wrong, but I believe diversity is an old, old [blank] that was used during the Civil War era.', answer:'Wooden ship',difficulty: 1, image_url: "../images/popculture_back.jpg"},
+',difficulty: 1, image_url: "../images/movies_back.jpg"},
+             {deck_id: 3, question:'Fill in the blank: \'Well, I could be wrong, but I believe diversity is an old, old [blank] that was used during the Civil War era.', answer:'Wooden ship',difficulty: 1, image_url: "../images/movies_back.jpg"},
 
 #Basketball Trivia Cards
              {deck_id: 4, question:'What team won the very first NBA game?', answer:'New York Knicks',difficulty: 2, image_url: "../images/basketball_back.jpg"},

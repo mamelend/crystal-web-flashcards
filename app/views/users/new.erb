@@ -1,4 +1,4 @@
-<h1>Sign up for some fun!</h1>
+<h1 class="centered">Sign up for some fun!</h1>
 
 <% if @errors %>
   <span>Something went wrong:</span>
@@ -9,7 +9,7 @@
   </ul>
 <% end %>
 
-<form method="post" action="/users">
+<form class="centered" method="post" action="/users">
   <label for="username-input" class="">Username:</label>
   <input id="username-input" name="user[username]" type="text" value="" tabindex="1" class=""/>
 

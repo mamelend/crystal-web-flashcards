@@ -85,6 +85,7 @@
 .card p {
     color: rgba(0,0,0,.6);
     font-size: 100%;
+    width: 600px;
     font-weight: normal;
     margin-top: 200px;
     position: absolute;

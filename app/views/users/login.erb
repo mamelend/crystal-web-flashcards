@@ -1,4 +1,4 @@
-<h1>Okay, what's your info again?</h1>
+<h1 class="centered">Okay, what's your info again?</h1>
 
 <% if @errors %>
   <span>Something went wrong:</span>
@@ -9,12 +9,12 @@
   </ul>
 <% end %>
 
-<form method="post" action="/users/login">
-  <label for="email-input" class="">Email:</label>
-  <input id="email-input" name="user[email]" type="email" tabindex="1" class=""/>
+<form class="centered" method="post" action="/users/login">
+  <label for="email-input" class="clear_left">Email:</label>
+  <input id="email-input" name="user[email]" type="email" tabindex="1" class="clear_left"/>
 
-  <label for="password-input" class="">Password:</label>
-  <input id="password-input" name="user[password]" type="password" tabindex="2" class=""/>
+  <label for="password-input" class="clear_left">Password:</label>
+  <input id="password-input" name="user[password]" type="password" tabindex="2" class="clear_left"/>
 
   <input type="submit" value="Sign In" tabindex="3" class="">
 </form>

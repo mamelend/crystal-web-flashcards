@@ -7,7 +7,7 @@
     <% @decks.each do |deck| %>
       <tr class="pad_left">
       <td>
-        <span class="clear centered buffer"><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a></span>
+        <span class="clear centered buffer"><% if logged_in? %><a href="/rounds/<%= deck.id  %>"><%= deck.name %></a><% else %> Please register or log in to play!</span><% end %>
         <img class="buffer" src=<%= deck.image_url %> alt="deck pic" height="169" width="300" align="left"/>
       </td>
       </tr>

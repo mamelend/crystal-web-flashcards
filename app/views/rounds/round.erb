@@ -31,7 +31,7 @@
         <input type="submit" value="Next question">
       </form>
 <% else %>
-   <img class="question_wrong_checkmark" src="../images/X.gif">
+   <img class="question_wrong_checkmark" src="../images/xmark.jpg">
       <form class="question_correct_form" method="post" action="/rounds/<%= @round.id %>">
         <input type="hidden" name="_method" value="put">
         <input type="hidden" name="card_id" value="<%= @card.id %>">

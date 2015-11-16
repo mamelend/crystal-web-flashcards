@@ -1,22 +1,45 @@
 <p class="clear_right centered bigger_text bolder"><%= @deck.name %></p>
 
 
+<% if @is_correct == "2" %>
+  <div class=" clear card transition">
+    <h2 class="transition">Question <%= @card.id %> </h2>
+    <p class="centered"><%= @card.question %></p>
+    <div class="cta-container transition">
 
-<div class=" clear card transition">
-  <h2 class="transition">Question <%= @card.id %> </h2>
-  <p class="centered"><%= @card.question %></p>
-  <div class="cta-container transition">
+      <p class="round_question"></p>
+      <p></p>
+      <form method="post" action="/rounds/<%= @round.id %>">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="card_id" value="<%= @card.id %>">
+        <input type="hidden" name="points" value="<%= @points %>">
+        <input type="hidden" name="is_correct" value="2">
+        <input type="text" name="guess">
+        <input type="submit" value="submit your guess">
+      </form>
 
-    <p class="round_question"></p>
-    <p></p>
-    <form method="post" action="/rounds/<%= @round.id %>">
-      <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="card_id" value="<%= @card.id %>">
-      <input type="hidden" name="points" value="<%= @points %>">
-      <input type="text" name="guess">
-      <input type="submit" value="submit your guess">
-    </form>
-
+    </div>
+    <div class="card_circle transition" style="background-color: purple; background-image: url(<%= @card.image_url %>);"></div>
   </div>
-  <div class="card_circle transition" style="background-color: purple; background-image: url(<%= @card.image_url %>);"></div>
-</div>
+<% elsif @is_correct == "1" %>
+    <img class="question_correct_checkmark" src="../images/checkmark.gif">
+      <form class="question_correct_form" method="post" action="/rounds/<%= @round.id %>">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="card_id" value="<%= @card.id %>">
+        <input type="hidden" name="points" value="<%= @points %>">
+        <input type="hidden" name="is_correct" value="3">
+        <input type="submit" value="Next question">
+      </form>
+<% else %>
+   <img class="question_wrong_checkmark" src="../images/X.gif">
+      <form class="question_correct_form" method="post" action="/rounds/<%= @round.id %>">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="card_id" value="<%= @card.id %>">
+        <input type="hidden" name="points" value="<%= @points %>">
+        <p class="centered">The correct answer is</p>
+        <p class="centered"><%= @card.answer %></p>
+        <input type="hidden" name="is_correct" value="3">
+        <input type="submit" value="Next question">
+      </form>
+
+<% end %>

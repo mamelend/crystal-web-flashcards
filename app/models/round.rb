@@ -1,7 +1,7 @@
 class Round < ActiveRecord::Base
   belongs_to :user
   belongs_to :deck
-
+  
   @@points_for_card = {}, @@cards = [], @@card = nil
 
   def self.points_for_card=(value)

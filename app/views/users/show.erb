@@ -1,4 +1,4 @@
-<h1 class="bold centered">YOUR STATS</h1>
+<h1 class="bold centered">Player Statistics</h1>
 
 <div class="bottom_buffer">
   <ol>
@@ -7,7 +7,7 @@
     </li>
     <% @user.rounds.each do |round| %>
       <li>
-        On <%= round.created_at %> you scored <%= round.points %> points!
+        You scored a total of <%= round.points %> points on <%= round.created_at.strftime("%B %d, %Y") %> at <%= round.created_at.strftime("%I:%M%p") %>.
       </li>
     <% end %>
   </ol>

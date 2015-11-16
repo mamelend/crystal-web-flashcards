@@ -5,10 +5,13 @@
     <li class="bold bigger_text">
       <%=@user.username%>
     </li>
-    <% @user.rounds.each do |round| %>
-      <li>
-        You scored a total of <%= round.points %> points on <%= round.created_at.strftime("%B %d, %Y") %> at <%= round.created_at.strftime("%I:%M%p") %>.
-      </li>
+
+    <% sorted_deck = @user.rounds.order(deck_id: :desc)%>
+
+    <%sorted_deck.each do |round|%>
+      <ol>
+        You scored a total of <%= round.points %> points on <%=round.deck.name%> on the day of <%= round.created_at.strftime("%B %d, %Y") %> at <%= round.created_at.strftime("%I:%M%p") %>.
+      </ol>
     <% end %>
   </ol>
 </div>
